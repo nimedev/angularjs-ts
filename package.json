@@ -1,0 +1,94 @@
+{
+  "name": "angularjs-ts",
+  "version": "0.1.0",
+  "description": "A starting point for building web applications with AngularJS 1.5 using TypeScript, JSPM and PostCSS",
+  "scripts": {
+    "app-constants": "node app-constants",
+    "build": "export ANGULARJS_TS_ENV='production' && npm run build-cmd",
+    "build-cmd": "npm run lint && npm run app-constants && gulp && npm run bundle-sfx && gulp css-component:clean && node scripts/build-notifier",
+    "build-test": "export ANGULARJS_TS_ENV='test' && npm run build-cmd",
+    "bundle-sfx": "jspm bundle-sfx src/main.ts dist/assets/js/app.js --minify --skip-source-maps",
+    "clean": "gulp clean && gulp css-component:clean && ANGULARJS_TS_ENV=''",
+    "dev": "export ANGULARJS_TS_ENV='development' && npm run watch & node scripts/dev-server",
+    "eslint": "eslint --ext=js .",
+    "lint": "npm run eslint && npm run tslint",
+    "lite-serve": "node scripts/lite-server",
+    "tslint": "tslint 'src/**/*.ts' -e src/app/app.constants.ts",
+    "update": "rm -rf node_modules && npm install && npm outdated",
+    "watch": "nodemon --watch app-constants app-constants & gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nimedev/angularjs-ts.git"
+  },
+  "author": "nicolasmejiaco@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimedev/angularjs-ts/issues"
+  },
+  "homepage": "https://github.com/nimedev/angularjs-ts#readme",
+  "engines": {
+    "node": ">=6.0.0 <7.0.0"
+  },
+  "dependencies": {
+    "niduscss-base": "1.0.1",
+    "niduscss-components-button": "1.2.0",
+    "niduscss-components-divider": "1.0.0",
+    "niduscss-components-icon-button": "1.0.0",
+    "niduscss-elements-form": "1.1.1",
+    "niduscss-elements-link": "1.1.0",
+    "niduscss-elements-typography": "1.1.0",
+    "niduscss-lib-mixins": "1.3.0",
+    "niduscss-material-icons": "1.0.1",
+    "niduscss-utils-align": "1.3.0",
+    "niduscss-utils-buttons": "1.0.0",
+    "niduscss-utils-color": "1.0.0",
+    "niduscss-utils-flex": "1.0.0",
+    "niduscss-utils-shadow": "1.3.1",
+    "niduscss-utils-state": "1.1.0",
+    "niduscss-utils-text": "1.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.14.0",
+    "connect-history-api-fallback": "1.3.0",
+    "del": "2.2.1",
+    "eslint": "3.2.2",
+    "eslint-config-nimedev": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-copy-nimedev": "1.2.2",
+    "gulp-html-nimedev": "1.3.1",
+    "gulp-postcss-nimedev": "1.4.1",
+    "ip": "1.1.3",
+    "jspm": "0.16.42",
+    "node-notifier": "4.6.0",
+    "nodemon": "1.10.0",
+    "run-sequence": "1.2.2",
+    "stylelint": "7.1.0",
+    "stylelint-config-nimedev": "7.0.0",
+    "time-require": "0.1.2",
+    "tslint": "3.14.0",
+    "typescript": "1.8.10"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular": "npm:angular@1.5.8",
+      "angular-animate": "npm:angular-animate@1.5.8",
+      "angular-aria": "npm:angular-aria@1.5.8",
+      "angular-cookies": "npm:angular-cookies@1.5.8",
+      "angular-messages": "npm:angular-messages@1.5.8",
+      "angular-touch": "npm:angular-touch@1.5.8",
+      "angular-translate": "npm:angular-translate@2.9.1",
+      "angular-translate-handler-log": "npm:angular-translate-handler-log@2.9.1",
+      "angular-translate-loader-static-files": "npm:angular-translate-loader-static-files@2.9.1",
+      "angular-translate-storage-cookie": "npm:angular-translate-storage-cookie@2.9.1",
+      "angular-translate-storage-local": "npm:angular-translate-storage-local@2.9.1",
+      "angular-ui-router": "npm:angular-ui-router@0.3.1"
+    },
+    "devDependencies": {
+      "css": "npm:systemjs-plugin-css@0.1.26",
+      "json": "npm:systemjs-plugin-json@0.1.0",
+      "text": "github:systemjs/plugin-text@0.0.7",
+      "typescript": "npm:typescript@^1.8.10"
+    }
+  }
+}
