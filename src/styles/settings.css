@@ -42,15 +42,15 @@
     * Use: choose a palette for primary, accent and warn category then
     * use a map to set de shadows (default, hue1, hue2 and hue3).
     */
-  --App-primary-df: #383838;
-  --App-primary-h1: #e0e0e0;
-  --App-primary-h2: #808080;
-  --App-primary-h3: #262626;
+  --App-primary-df: #2196f3;
+  --App-primary-h1: #64b5f6;
+  --App-primary-h2: #1565c0;
+  --App-primary-h3: #82b1ff;
 
-  --App-accent-df: rgb(192, 178, 125);
-  --App-accent-h1: rgb(172, 160, 100);
-  --App-accent-h2: rgb(144, 133, 93);
-  --App-accent-h3: rgb(96, 89, 62);
+  --App-accent-df: #ffab40;
+  --App-accent-h1: #ffd180;
+  --App-accent-h2: #ff9100;
+  --App-accent-h3: #ff6d00;
 
   --App-warn-df: #f44336;
   --App-warn-h1: #e57373;

@@ -16,6 +16,7 @@ import storageLocal from 'angular-translate-storage-local'
 import { appConfig } from './app.config'
 
 // Subcomponents
+import { homeComponent } from './home/index'
 
 // Shared Directives
 import { directives } from './shared/directives/index'
@@ -73,6 +74,7 @@ angular
     storageLocal,
 
     // Subcomponents
+    homeComponent,
 
     // Shared
     directives,
