@@ -6,14 +6,14 @@
 'use strict'
 
 // Set default node environment to development
-process.env.YGH_WEBAPP_ENV = process.env.YGH_WEBAPP_ENV || 'development'
+process.env.ANGULARJS_TS_ENV = process.env.ANGULARJS_TS_ENV || 'development'
 
 // core modules
 const fs = require('fs')
 const path = require('path')
 
 // App Modules
-const Environment = require(`./${process.env.YGH_WEBAPP_ENV}`)
+const Environment = require(`./${process.env.ANGULARJS_TS_ENV}`)
 const appConfig = new Environment()
 
 // Constants & Variables

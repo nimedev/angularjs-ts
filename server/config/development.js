@@ -20,7 +20,7 @@ module.exports = class extends Environment {
     super()
 
     // Server port
-    this.port = process.env.YGH_WEBAPP_PORT || 8081
+    this.port = 8081
 
     // Application path
     this.appPath = path.normalize(`${__baseDir}/../src`)

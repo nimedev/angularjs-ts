@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.2] - 2012-08-14
+
+### Fixed
+- Fix bug with environment variables in server and app-constants module.
+
+
 ## [0.2.1] - 2012-08-14
 
 ### Modified
