@@ -42,8 +42,15 @@ gulp.task('css', () => postcssTask(config.css.options))
 gulp.task('css:dev', () => postcssTask(config.css.options, true))
 
 // Process css files of each app component
-// gulp.task('css-component', () => postcssTask(cssComponentOptions))
-gulp.task('css-component', () => postcssTask(config.cssComponent.options))
+// Create an array of task with the array options in config file
+const cssComponentTasks = []
+for (let option of config.cssComponent.options) {
+  let taskName = `css-component:${option.name}`
+  gulp.task(taskName, () => postcssTask(option))
+  cssComponentTasks.push(taskName)
+}
+
+gulp.task('css-component', cssComponentTasks)
 gulp.task('css-component:clean', () => del.sync(config.cssComponent.clean))
 
 // index task
@@ -59,10 +66,14 @@ gulp.task('css:notify', ['css:dev'], () => notifier.notify({
   message: 'Finish postcss task for style files'
 }))
 
-gulp.task('css-component:notify', ['css-component'], () => notifier.notify({
-  title: appName,
-  message: 'Finish postcss task for component styles'
-}))
+// Create a notification task for each css-component task
+for (let option of config.cssComponent.options) {
+  let taskName = `css-component:${option.name}`
+  gulp.task(`${taskName}-notify`, [taskName], () => notifier.notify({
+    title: appName,
+    message: `Finish ${taskName} task for component styles`
+  }))
+}
 
 
 // WATCH tasks
@@ -77,7 +88,10 @@ gulp.task('watch', ['development'], () => {
   gulp.watch(config.css.watch, ['css:notify'])
 
   // Watch for changes in component styles files
-  gulp.watch(config.cssComponent.watch, ['css-component:notify'])
+  for (let option of config.cssComponent.options) {
+    gulp.watch(option.watch.concat(config.cssComponent.ignoreWatch),
+      [`css-component:${option.name}-notify`])
+  }
 })
 
 
@@ -85,6 +99,10 @@ gulp.task('watch', ['development'], () => {
 gulp.task('build', ['clean', 'css-component:clean'],
   cb => runSequence(['assets', 'index', 'misc'], 'css',
     'css-component', cb))
+
+// Production task
+gulp.task('build', ['clean', 'css-component:clean'],
+  cb => runSequence(['assets', 'index', 'misc', 'css', 'css-component'], cb))
 
 
 // DEFAULT TASK

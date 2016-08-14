@@ -96,12 +96,29 @@ npm run build-test
 ```
 Put all in dist folder ready to be served.
 
+```sh
+# cd to your project folder
+npm run test-serve
+```
+Run a simple server for test deployment.
+
 ### Production workflow
 ```sh
 # cd to your project folder
 npm run build
 ```
 Put all in dist folder ready for production.
+
+This project include a small server ready for production
+
+```sh
+# cd to your project folder
+# Set environment variable for production
+export NODE_ENV='production'
+
+# run the server
+npm start
+```
 
 ### Others scripts
 

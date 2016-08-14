@@ -53,30 +53,46 @@ module.exports = {
 
   // css-component task. Process css files for component
   cssComponent: {
-    // Options used in postcss task
-    options: {
-      src: [
-        `${srcDir}/app/**/*.css`,
-        `!${srcDir}/app/**/*.part.css`,
-        `!${srcDir}/app/**/*.build.css`
-      ],
-      dest: `${prodDir}/app`,
-      outName: {
-        extname: '.build.css'
-      },
-      minify: false
-    },
+    // Array of options used to create multiple postcss task by main components
+    // Each object contain the options for a specific folder of components.
+    // Divide when application grow to much.
+    options: [
+      {
+        // app component except base folders
+        name: 'app',
+        src: [
+          `${srcDir}/app/**/*.css`,
+          `!${srcDir}/app/base/**/*.css`
+        ],
+        dest: `${prodDir}/app`,
+        outName: {
+          extname: '.css'
+        },
+        minify: false,
+        watch: [
+          `${srcDir}/app/**/*`,
+          `!${srcDir}/app/base/**/*.css`,
+        ]
+      }, {
+        // base folder of app component (root)
+        name: 'base',
+        src: `${srcDir}/app/base/**/*.css`,
+        dest: `${prodDir}/app/base`,
+        outName: {
+          extname: '.css'
+        },
+        minify: false,
+        watch: [`${srcDir}/app/base/**/*`]
+      }],
 
     // Clean path to delete processed files
     clean: `${prodDir}/app`,
 
-    // Path to watch for css files of components
-    watch: [
-      `${srcDir}/app/**/*`,
+    ignoreWatch: [
       `!${srcDir}/app/**/*.html`,
+      `!${srcDir}/app/**/*.js`,
       `!${srcDir}/app/**/*.ts`,
-      `!${srcDir}/app/**/*.json`,
-      `!${srcDir}/app/**/*.min.css`
+      `!${srcDir}/app/**/*.json`
     ]
   },
 

@@ -1,6 +1,6 @@
 {
   "name": "angularjs-ts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A starting point for building web applications with AngularJS 1.5 using TypeScript, JSPM and PostCSS",
   "scripts": {
     "app-constants": "node app-constants",
@@ -12,7 +12,9 @@
     "dev": "export ANGULARJS_TS_ENV='development' && npm run watch & node scripts/dev-server",
     "eslint": "eslint --ext=js .",
     "lint": "npm run eslint && npm run tslint",
-    "lite-serve": "node scripts/lite-server",
+    "lite-serve": "export NODE_ENV='development' && npm start",
+    "start": "node server/server",
+    "test-serve": "export NODE_ENV='test' && npm start",
     "tslint": "tslint 'src/**/*.ts' -e src/app/app.constants.ts",
     "update": "rm -rf node_modules && npm install && npm outdated",
     "watch": "nodemon --watch app-constants app-constants & gulp watch"
@@ -31,6 +33,21 @@
     "node": ">=6.0.0 <7.0.0"
   },
   "dependencies": {
+    "compression": "1.6.2",
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "browser-sync": "2.14.0",
+    "connect-history-api-fallback": "1.3.0",
+    "del": "2.2.2",
+    "eslint": "3.3.0",
+    "eslint-config-nimedev": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-copy-nimedev": "1.2.2",
+    "gulp-html-nimedev": "1.3.1",
+    "gulp-postcss-nimedev": "1.4.1",
+    "ip": "1.1.3",
+    "jspm": "0.16.42",
     "niduscss-base": "1.0.1",
     "niduscss-components-button": "1.2.0",
     "niduscss-components-divider": "1.0.0",
@@ -46,20 +63,7 @@
     "niduscss-utils-flex": "1.0.0",
     "niduscss-utils-shadow": "1.3.1",
     "niduscss-utils-state": "1.1.0",
-    "niduscss-utils-text": "1.3.1"
-  },
-  "devDependencies": {
-    "browser-sync": "2.14.0",
-    "connect-history-api-fallback": "1.3.0",
-    "del": "2.2.1",
-    "eslint": "3.2.2",
-    "eslint-config-nimedev": "3.0.0",
-    "gulp": "3.9.1",
-    "gulp-copy-nimedev": "1.2.2",
-    "gulp-html-nimedev": "1.3.1",
-    "gulp-postcss-nimedev": "1.4.1",
-    "ip": "1.1.3",
-    "jspm": "0.16.42",
+    "niduscss-utils-text": "1.3.1",
     "node-notifier": "4.6.0",
     "nodemon": "1.10.0",
     "run-sequence": "1.2.2",

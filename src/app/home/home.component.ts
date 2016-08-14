@@ -3,7 +3,8 @@
 // Dependencies
 import * as angular from 'angular'
 import template from './home.component.html!text'
-import 'dist/app/home/home.component.build.css!'
+import 'dist/app/home/home.component.css!'
+import { homeConfig } from './home.config'
 
 /** Component name */
 export const homeComponent = 'atsHome'
@@ -11,7 +12,7 @@ export const homeComponent = 'atsHome'
 /**
  * Class representing a controller for home component
  */
-class Controller {
+export class HomeController {
 
   // Use the $inject property to ensure proper functionality after minification
   public static $inject = ['$translate']
@@ -37,13 +38,7 @@ class Controller {
 angular
   .module(homeComponent, [])
   .component(homeComponent, {
-    controller: Controller,
+    controller: HomeController,
     template
   })
-  .config(['$stateProvider', $stateProvider => {
-    $stateProvider
-      .state('homeState', {
-        url: '/',
-        template: '<ats-home></ats-home>'
-      })
-  }])
+  .config(homeConfig)

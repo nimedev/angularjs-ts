@@ -36,7 +36,7 @@ export const appComponent = 'appRoot'
 /**
  * Class representing a controller for app component
  */
-class Controller {
+export class AppController {
 
   // Use the $inject property to ensure proper functionality after minification
   public static $inject = ['$log', 'config']
@@ -82,7 +82,7 @@ angular
     services,
   ])
   .component(appComponent, {
-    controller: Controller,
+    controller: AppController,
     template: '<main ui-view autoscroll></main>'
   })
   .config(appConfig)

@@ -19,6 +19,12 @@ const config = {
   // Watch folder
   files: ['src', 'dist'],
 
+  // Options passed to Chokidar
+  watchOptions: {
+    ignoreInitial: true,
+    ignored: 'src/**/*.css'
+  },
+
   // Middleware
   middleware: [historyApiFallback()],
 
