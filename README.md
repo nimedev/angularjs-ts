@@ -39,7 +39,14 @@ This lets you run `jspm` from the command line.
 jspm install
 # answer yes to all questions
 ```
-This install packages used in the application. jspm modify src/config.js file. Please fix this file using git
+This install packages used in the application.
+
+Afther thist config.js and package.json files are modified. You can reset this changes using git:
+
+```sh
+# cd to your project folder
+git reset --hard
+```
 
 #### 6) (Development) Install a manager for TypeScript definitions `typings`.
 You can use `typings` for intellisense (I use this in VScode).

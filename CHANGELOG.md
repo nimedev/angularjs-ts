@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.1] - 2012-08-14
+
+### Modified
+- Modify install jspm en README.md file.
+
+
 ## [0.2.0] - 2012-08-14
 
 ### Added
