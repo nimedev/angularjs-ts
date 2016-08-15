@@ -23,9 +23,9 @@ module.exports = class extends Environment {
     this.port = process.env.ANGULARJS_TS_PORT + 1 || 3001
 
     // Application path
-    this.appPath = path.normalize(`${__baseDir}/../src`)
+    this.appPath = path.normalize(`${__baseDir}/../client/src`)
 
     // Static paths
-    this.staticPaths = ['../dist', '../src', '..']
+    this.staticPaths = ['../client/dist', '../client/src', '../client']
   }
 }

@@ -14,15 +14,15 @@ const config = {
   port: process.env.ANGULARJS_TS_PORT || 3000,
 
   // Server folder
-  server: ['.', 'src', 'dist'],
+  server: ['client', 'client/src', 'client/dist'],
 
   // Watch folder
-  files: ['src', 'dist'],
+  files: ['client/src', 'client/dist'],
 
   // Options passed to Chokidar
   watchOptions: {
     ignoreInitial: true,
-    ignored: 'src/**/*.css'
+    ignored: 'client/src/**/*.css'
   },
 
   // Middleware

@@ -5,8 +5,8 @@
 'use strict'
 
 // Constants & Variables
-const srcDir = 'src'
-const prodDir = 'dist'
+const srcDir = 'client/src'
+const prodDir = 'client/dist'
 const tmpDir = 'tmp'
 
 /** Settings for gulp tasks */

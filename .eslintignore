@@ -7,4 +7,4 @@ jspm_packages
 node_modules
 
 # misc
-config.js
+client/config.js

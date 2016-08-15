@@ -1,23 +1,24 @@
 {
   "name": "angularjs-ts",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "A starting point for building web applications with AngularJS 1.5 using TypeScript, JSPM and PostCSS",
   "scripts": {
-    "app-constants": "node app-constants",
+    "app-constants": "node client/app-constants",
     "build": "export ANGULARJS_TS_ENV='production' && npm run build-cmd",
     "build-cmd": "npm run lint && npm run app-constants && gulp && npm run bundle-sfx && gulp css-component:clean && node scripts/build-notifier",
     "build-test": "export ANGULARJS_TS_ENV='test' && npm run build-cmd",
-    "bundle-sfx": "jspm bundle-sfx src/main.ts dist/assets/js/app.js --minify --skip-source-maps",
+    "bundle-sfx": "jspm bundle-sfx src/main.ts client/dist/assets/js/app.js --minify --skip-source-maps",
     "clean": "gulp clean && gulp css-component:clean && ANGULARJS_TS_ENV=''",
     "dev": "export ANGULARJS_TS_ENV='development' && npm run watch & node scripts/dev-server",
     "eslint": "eslint --ext=js .",
     "lint": "npm run eslint && npm run tslint",
     "lite-serve": "export NODE_ENV='development' && npm start",
+    "production-serve": "export NODE_ENV='production' && npm start",
     "start": "node server/server",
     "test-serve": "export NODE_ENV='test' && npm start",
     "tslint": "tslint 'src/**/*.ts' -e src/app/app.constants.ts",
     "update": "rm -rf node_modules && npm install && npm outdated",
-    "watch": "nodemon --watch app-constants app-constants & gulp watch"
+    "watch": "nodemon --watch client/app-constants client/app-constants & gulp watch"
   },
   "repository": {
     "type": "git",
@@ -74,6 +75,9 @@
     "typescript": "1.8.10"
   },
   "jspm": {
+    "directories": {
+      "baseURL": "client"
+    },
     "dependencies": {
       "angular": "npm:angular@1.5.8",
       "angular-animate": "npm:angular-animate@1.5.8",

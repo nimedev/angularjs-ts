@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.3.0] - 2012-08-15
+
+### Modified
+- Move all files related with client side to client folder.
+
+
 ## [0.2.5] - 2012-08-14
 
 ### Updated

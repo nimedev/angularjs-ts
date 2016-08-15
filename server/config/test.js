@@ -20,9 +20,9 @@ module.exports = class extends Environment {
     super()
 
     // Application path
-    this.appPath = path.normalize(`${__baseDir}/../dist`)
+    this.appPath = path.normalize(`${__baseDir}/../client/dist`)
 
     // Static paths
-    this.staticPaths = ['../dist']
+    this.staticPaths = ['../client/dist']
   }
 }
