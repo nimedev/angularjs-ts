@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.5] - 2012-08-14
+
+### Updated
+- Disable ui from dev-server script.
+
+
 ## [0.2.4] - 2012-08-14
 
 ### Modified

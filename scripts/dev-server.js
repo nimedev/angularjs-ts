@@ -28,6 +28,9 @@ const config = {
   // Middleware
   middleware: [historyApiFallback()],
 
+  // Disable UI completly
+  ui: false,
+
   // No open browser
   open: false,
 
