@@ -18,9 +18,10 @@ module.exports = class extends Environment {
    */
   constructor() {
     super()
+    const envPort = process.env.ANGULARJS_TS_PORT
 
-    // Server port (used for lite server script)
-    this.port = process.env.ANGULARJS_TS_PORT + 1 || 3001
+    // Server port (Increase the port by one used for lite server script)
+    this.port = envPort ? Number.parseInt(envPort) + 1 : 3001
 
     // Application path
     this.appPath = path.normalize(`${__baseDir}/../client/src`)

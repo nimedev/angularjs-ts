@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.3.1] - 2012-08-15
+
+### Fixed
+- Fix: bug in development config of server.
+
+
 ## [0.3.0] - 2012-08-15
 
 ### Modified
