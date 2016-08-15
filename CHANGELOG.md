@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.3] - 2012-08-14
+
+### Fixed
+- Fix issues with servers port.
+
+
 ## [0.2.2] - 2012-08-14
 
 ### Fixed

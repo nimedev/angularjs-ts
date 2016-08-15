@@ -19,8 +19,8 @@ module.exports = class extends Environment {
   constructor() {
     super()
 
-    // Server port
-    this.port = 8081
+    // Server port (used for lite server script)
+    this.port = process.env.ANGULARJS_TS_PORT + 1 || 8081
 
     // Application path
     this.appPath = path.normalize(`${__baseDir}/../src`)

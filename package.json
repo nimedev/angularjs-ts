@@ -1,6 +1,6 @@
 {
   "name": "angularjs-ts",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A starting point for building web applications with AngularJS 1.5 using TypeScript, JSPM and PostCSS",
   "scripts": {
     "app-constants": "node app-constants",
