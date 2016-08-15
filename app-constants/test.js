@@ -20,6 +20,6 @@ module.exports = class Test extends Environment {
     super()
 
     // API base url
-    this.restUrl = `http://www.test.com:8081/api`
+    this.restUrl = `http://www.test.com:8080/api`
   }
 }

@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.2.4] - 2012-08-14
+
+### Modified
+- Modify defualt ports servers to 3000.
+
+
 ## [0.2.3] - 2012-08-14
 
 ### Fixed

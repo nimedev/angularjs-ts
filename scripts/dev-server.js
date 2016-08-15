@@ -11,7 +11,7 @@ const historyApiFallback = require('connect-history-api-fallback')
 // Configuration object for browsersync
 const config = {
   // Port
-  port: process.env.ANGULARJS_TS_PORT || 8080,
+  port: process.env.ANGULARJS_TS_PORT || 3000,
 
   // Server folder
   server: ['.', 'src', 'dist'],

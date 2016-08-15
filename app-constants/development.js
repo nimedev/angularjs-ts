@@ -26,6 +26,6 @@ module.exports = class Development extends Environment {
     const ipAddress = ip.address()
 
     // API base url
-    this.restUrl = `http://${ipAddress}:8081/api`
+    this.restUrl = `http://${ipAddress}:8080/api`
   }
 }

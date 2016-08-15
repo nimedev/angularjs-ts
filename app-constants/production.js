@@ -20,7 +20,7 @@ module.exports = class Production extends Environment {
     super()
 
     // API base url
-    this.restUrl = 'https://www.angularjs-ts.com:8081/api'
+    this.restUrl = 'https://www.angularjs-ts.com:8080/api'
 
     // Production mode
     this.dev = false
