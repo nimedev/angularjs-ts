@@ -1,13 +1,13 @@
 /** @module home.component */
 
 // Dependencies
-import * as angular from 'angular'
 import template from './home.component.html!text'
 import 'dist/app/home/home.component.css!'
-import { homeConfig } from './home.config'
 
-/** Component name */
-export const homeComponent = 'atsHome'
+/**
+ * Component name
+ */
+export const homeComponentName = 'atsHome'
 
 /**
  * Class representing a controller for home component
@@ -34,11 +34,10 @@ export class HomeController {
   }
 }
 
-// Define component in a angular module
-angular
-  .module(homeComponent, [])
-  .component(homeComponent, {
-    controller: HomeController,
-    template
-  })
-  .config(homeConfig)
+/**
+ * Component object
+ */
+export const homeComponent = {
+  controller: HomeController,
+  template
+}

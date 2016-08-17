@@ -17,6 +17,9 @@ export class StylesService {
   // Prepare breakpoints according to root fontsize
   public breakpoints: Object = {}
 
+  // Service name
+  public static serviceName = 'stylesService'
+
   // Use the $inject property to ensure proper functionality after minification
   public static $inject = ['$window', 'config']
 

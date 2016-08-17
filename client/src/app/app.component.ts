@@ -1,37 +1,12 @@
-/** @module app.component */
+/**
+ * Root component
+ * @module app.component
+ */
 
-// Dependencies
-import * as angular from 'angular'
-import ngAnimate from 'angular-animate'
-import ngAria from 'angular-aria'
-import ngCookies from 'angular-cookies'
-import ngMessages from 'angular-messages'
-import ngTouch from 'angular-touch'
-import uiRouter from 'angular-ui-router'
-import translate from 'angular-translate'
-import handlerLog from 'angular-translate-handler-log'
-import loaderStaticFiles from 'angular-translate-loader-static-files'
-import storageCookie from 'angular-translate-storage-cookie'
-import storageLocal from 'angular-translate-storage-local'
-import { appConfig } from './app.config'
-
-// Subcomponents
-import { homeComponent } from './home/index'
-
-// Shared Directives
-import { directives } from './shared/directives/index'
-
-// Shared Interceptor
-import { interceptor } from './shared/interceptor/index'
-
-// Shared services
-import { services } from './shared/services/index'
-
-// Application constants
-import appConstants from './app.constants'
-
-/** Component name */
-export const appComponent = 'appRoot'
+/**
+ * Component name
+ */
+export const appComponentName = 'appRoot'
 
 /**
  * Class representing a controller for app component
@@ -57,33 +32,10 @@ export class AppController {
   }
 }
 
-// Define component in a angular module
-angular
-  .module(appComponent, [
-    // Dependencies
-    ngAnimate,
-    ngAria,
-    ngCookies,
-    ngMessages,
-    ngTouch,
-    uiRouter,
-    translate,
-    handlerLog,
-    loaderStaticFiles,
-    storageCookie,
-    storageLocal,
-
-    // Subcomponents
-    homeComponent,
-
-    // Shared
-    directives,
-    interceptor,
-    services,
-  ])
-  .component(appComponent, {
-    controller: AppController,
-    template: '<main ui-view autoscroll></main>'
-  })
-  .config(appConfig)
-  .constant('config', appConstants)
+/**
+ * Component object
+ */
+export const appComponent: any = {
+  controller: AppController,
+  template: '<main ui-view></main>'
+}

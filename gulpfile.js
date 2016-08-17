@@ -89,7 +89,7 @@ gulp.task('watch', ['development'], () => {
 
   // Watch for changes in component styles files
   for (let option of config.cssComponent.options) {
-    gulp.watch(option.watch.concat(config.cssComponent.ignoreWatch),
+    gulp.watch(option.watch.concat(config.cssComponent.commonWatch),
       [`css-component:${option.name}-notify`])
   }
 })

@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../../typings/index.d.ts" />
 
 // Support AMD require for angular-animate
 declare module 'angular-animate' {

@@ -18,11 +18,8 @@ System.config({
 
   map: {
     "angular": "npm:angular@1.5.8",
-    "angular-animate": "npm:angular-animate@1.5.8",
-    "angular-aria": "npm:angular-aria@1.5.8",
     "angular-cookies": "npm:angular-cookies@1.5.8",
     "angular-messages": "npm:angular-messages@1.5.8",
-    "angular-touch": "npm:angular-touch@1.5.8",
     "angular-translate": "npm:angular-translate@2.9.1",
     "angular-translate-handler-log": "npm:angular-translate-handler-log@2.9.1",
     "angular-translate-loader-static-files": "npm:angular-translate-loader-static-files@2.9.1",

@@ -1,2 +1,2 @@
 /** interceptor module */
-export { interceptor } from './interceptor'
+export { interceptorModule } from './interceptor.module'

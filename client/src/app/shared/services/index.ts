@@ -1,2 +1,2 @@
-/** angular module for shared services */
-export { services } from './services'
+/** services module */
+export { servicesModule } from './services.module'

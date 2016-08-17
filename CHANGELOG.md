@@ -1,5 +1,17 @@
 # Change Log
 
+## [0.4.0] - 2012-08-16
+
+### Added
+- Use new organization by modules.
+
+### Updated
+- Update watch options for css-component tasks.
+
+### Removed
+- Remove angular-animate, angular-aria and angular-touch.
+
+
 ## [0.3.1] - 2012-08-15
 
 ### Fixed

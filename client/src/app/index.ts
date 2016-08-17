@@ -1,2 +1,2 @@
-/** app-root component */
-export { appComponent } from './app.component'
+/** app module */
+export { appModule } from './app.module'

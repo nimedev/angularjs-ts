@@ -88,7 +88,8 @@ module.exports = {
     // Clean path to delete processed files
     clean: `${prodDir}/app`,
 
-    ignoreWatch: [
+    commonWatch: [
+      `${srcDir}/styles/**/*`,
       `!${srcDir}/app/**/*.html`,
       `!${srcDir}/app/**/*.js`,
       `!${srcDir}/app/**/*.ts`,

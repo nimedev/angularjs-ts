@@ -7,7 +7,7 @@
 import * as angular from 'angular'
 
 // Application component
-import { appComponent } from './app/index'
+import { appModule } from './app/index'
 
 // Configurations
 import appConfig from './app/app.constants'
@@ -21,7 +21,7 @@ let startApp
 
 // Define angular app.
 angular
-  .module(appName, [appComponent])
+  .module(appName, [appModule])
 
 // Load app when document is ready
 htmlDocument = angular.element(document)

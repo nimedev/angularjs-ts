@@ -1,2 +1,2 @@
-/** ats-home component */
-export { homeComponent } from './home.component'
+/** home module */
+export { homeModule } from './home.module'

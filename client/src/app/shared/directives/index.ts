@@ -1,2 +1,2 @@
-/** angular module for shared directives */
-export { directives } from './directives'
+/** directives module */
+export { directivesModule } from './directives.module'
