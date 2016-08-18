@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.4.1] - 2012-08-18
+
+### Fixed
+- Fix path in tslint npm script.
+
+
 ## [0.4.0] - 2012-08-16
 
 ### Added
