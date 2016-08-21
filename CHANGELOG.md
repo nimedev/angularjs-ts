@@ -1,8 +1,17 @@
 # Change Log
 
-## [0.5.0] - 2012-08-21
+## [0.5.1] - 2012-08-21
+
+### Modified
+- Change typings installation in README.md file.
 
 ### Updated
+- Upgrade jspm, node-notifier and nodemon dependencies.
+
+
+## [0.5.0] - 2012-08-21
+
+### Modified
 - Improve typescript configuration
 
 

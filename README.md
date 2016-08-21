@@ -56,9 +56,9 @@ You can use `typings` for intellisense (I use this in VScode).
 npm install typings -g
 
 # cd to your project folder
-typings install
+npm run typings
 ```
-This create a typings folder which you can reference in your JavaScript files to get intellisense.
+This create a `client\typings` folder which you can reference in your TypeScript files to get intellisense.
 
 
 ## Workflow
@@ -162,7 +162,14 @@ To run tslint in console type:
 npm run tslint
 ```
 
-To run all linters in console type:
+To run TypeScript compiler in console type:
+
+```sh
+# cd to your project folder
+npm run tsc
+```
+
+To run all linters and TypeScript compiler in console type:
 
 ```sh
 # cd to your project folder
