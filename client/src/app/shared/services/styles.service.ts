@@ -57,6 +57,6 @@ export class StylesService {
    */
   get rootFontSize() {
     const fontSize = this.cssProperty(document.documentElement, 'font-size')
-    return Number.parseInt(fontSize)
+    return parseInt(fontSize)
   }
 }

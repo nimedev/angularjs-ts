@@ -1,5 +1,3 @@
-/// <reference path="../../typings/index.d.ts" />
-
 // Support AMD require for angular-animate
 declare module 'angular-animate' {
   export default 'ngAnimate'
@@ -53,4 +51,10 @@ declare module 'angular-translate-storage-cookie' {
 // Support AMD require for angular-translate-storage-local
 declare module 'angular-translate-storage-local' {
   export default 'pascalprecht.translate'
+}
+
+// Support AMD require for locale-en.json!
+declare module 'src/assets/i18n/locale-en.json!' {
+  const html: string
+  export default html
 }

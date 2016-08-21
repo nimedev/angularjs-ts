@@ -2,6 +2,7 @@
  * Config function to declare in config element of app component.
  * @module app.config
  */
+/// <reference path="app.d.ts" />
 
 // Dependencies
 import defaultLanguage from 'src/assets/i18n/locale-en.json!'

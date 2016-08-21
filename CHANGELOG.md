@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.5.0] - 2012-08-21
+
+### Updated
+- Improve typescript configuration
+
+
 ## [0.4.1] - 2012-08-18
 
 ### Fixed

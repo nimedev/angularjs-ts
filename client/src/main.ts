@@ -2,6 +2,7 @@
  * Main module used to bootstrap de application
  * @module main
  */
+/// <reference path="../typings/index.d.ts" />
 
 // Dependencies
 import * as angular from 'angular'

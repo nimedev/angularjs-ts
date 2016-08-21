@@ -1,7 +1,10 @@
-/** @module home.component */
+/**
+ * @module home.component
+ */
+/// <reference path="home.d.ts" />
 
 // Dependencies
-import template from './home.component.html!text'
+import template from 'src/app/home/home.component.html!text'
 import 'dist/app/home/home.component.css!'
 
 /**

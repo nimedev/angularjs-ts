@@ -17,4 +17,4 @@ export const homeModule = 'home'
 angular
   .module(homeModule, [])
   .component(homeComponentName, homeComponent)
-  .config(homeConfig)  
+  .config(homeConfig)

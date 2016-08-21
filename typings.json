@@ -1,6 +1,0 @@
-{
-  "globalDependencies": {
-    "angular": "registry:dt/angular#1.5.0+20160809151918",
-    "node": "registry:dt/node#6.0.0+20160815222444"
-  }
-}

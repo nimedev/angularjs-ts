@@ -1,6 +1,6 @@
 {
   "name": "angularjs-ts",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "A starting point for building web applications with AngularJS 1.5 using TypeScript, JSPM and PostCSS",
   "scripts": {
     "app-constants": "node client/app-constants",
@@ -8,15 +8,17 @@
     "build-cmd": "npm run lint && npm run app-constants && gulp && npm run bundle-sfx && gulp css-component:clean && node scripts/build-notifier",
     "build-test": "export ANGULARJS_TS_ENV='test' && npm run build-cmd",
     "bundle-sfx": "jspm bundle-sfx src/main.ts client/dist/assets/js/app.js --minify --skip-source-maps",
-    "clean": "gulp clean && gulp css-component:clean && ANGULARJS_TS_ENV=''",
+    "clean": "gulp clean && gulp css-component:clean",
     "dev": "export ANGULARJS_TS_ENV='development' && npm run watch & node scripts/dev-server",
     "eslint": "eslint --ext=js .",
-    "lint": "npm run eslint && npm run tslint",
+    "lint": "npm run eslint && npm run tsc && npm run tslint",
     "lite-serve": "export NODE_ENV='development' && npm start",
     "production-serve": "export NODE_ENV='production' && npm start",
     "start": "node server/server",
     "test-serve": "export NODE_ENV='test' && npm start",
+    "tsc": "tsc -p client/src",
     "tslint": "tslint 'client/src/**/*.ts' -e client/src/app/app.constants.ts",
+    "typings": "cd client && typings install",
     "update": "rm -rf node_modules && npm install && npm outdated",
     "watch": "nodemon --watch client/app-constants client/app-constants & gulp watch"
   },
@@ -78,6 +80,7 @@
     "directories": {
       "baseURL": "client"
     },
+    "configFile": "client/jspm.config.js",
     "dependencies": {
       "angular": "npm:angular@1.5.8",
       "angular-cookies": "npm:angular-cookies@1.5.8",
@@ -93,7 +96,7 @@
       "css": "npm:systemjs-plugin-css@0.1.26",
       "json": "npm:systemjs-plugin-json@0.1.0",
       "text": "github:systemjs/plugin-text@0.0.7",
-      "typescript": "npm:typescript@^1.8.10"
+      "typescript": "npm:typescript@1.8.10"
     }
   }
 }
