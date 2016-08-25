@@ -26,14 +26,7 @@ The version should be at or above 6.x.
 npm install
 ```
 
-#### 4) Install `JSPM` globally.
-```sh
-# cd to your project folder
-npm install jspm -g
-```
-This lets you run `jspm` from the command line.
-
-#### 5) Install `jspm` dependencies.
+#### 4) Install `jspm` dependencies.
 ```sh
 # cd to your project folder
 jspm install
@@ -41,24 +34,21 @@ jspm install
 ```
 This install packages used in the application.
 
-Afther thist config.js and package.json files are modified. You can reset this changes using git:
+Afther this config.js and package.json files are modified. You can reset this changes using git:
 
 ```sh
 # cd to your project folder
 git reset --hard
 ```
 
-#### 6) (Development) Install a manager for TypeScript definitions `typings`.
+#### 5) Install a manager for TypeScript definitions `typings`.
 You can use `typings` for intellisense (I use this in VScode).
 
 ```sh
-# install typings globally
-npm install typings -g
-
 # cd to your project folder
 npm run typings
 ```
-This create a `client\typings` folder which you can reference in your TypeScript files to get intellisense.
+This create a `client\typings` folder which you can reference in your TypeScript files.
 
 
 ## Workflow

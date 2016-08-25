@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.5.2] - 2012-08-25
+
+### Fixed
+- Fix bug with tsc script when run for first time.
+
+### Updated
+- Downgrade jspm to 0.16.42 because bundle don't work.
+
+
 ## [0.5.1] - 2012-08-21
 
 ### Modified

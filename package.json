@@ -1,6 +1,6 @@
 {
   "name": "angularjs-ts",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A starting point for building web applications with AngularJS 1.5 using TypeScript, JSPM and PostCSS",
   "scripts": {
     "app-constants": "node client/app-constants",
@@ -16,7 +16,7 @@
     "production-serve": "export NODE_ENV='production' && npm start",
     "start": "node server/server",
     "test-serve": "export NODE_ENV='test' && npm start",
-    "tsc": "tsc -p client/src",
+    "tsc": "npm run app-constants && tsc -p client/src",
     "tslint": "tslint 'client/src/**/*.ts' -e client/src/app/app.constants.ts",
     "typings": "cd client && typings install",
     "update": "rm -rf node_modules && npm install && npm outdated",
@@ -44,13 +44,13 @@
     "connect-history-api-fallback": "1.3.0",
     "del": "2.2.2",
     "eslint": "3.3.1",
-    "eslint-config-nimedev": "3.0.0",
+    "eslint-config-nimedev": "3.0.1",
     "gulp": "3.9.1",
     "gulp-copy-nimedev": "1.2.2",
     "gulp-html-nimedev": "1.3.1",
     "gulp-postcss-nimedev": "1.4.1",
     "ip": "1.1.3",
-    "jspm": "0.16.43",
+    "jspm": "0.16.42",
     "niduscss-base": "1.0.1",
     "niduscss-components-button": "1.2.0",
     "niduscss-components-divider": "1.0.0",
@@ -73,8 +73,9 @@
     "stylelint": "7.1.0",
     "stylelint-config-nimedev": "7.0.0",
     "time-require": "0.1.2",
-    "tslint": "3.14.0",
-    "typescript": "1.8.10"
+    "tslint": "3.15.1",
+    "typescript": "1.8.10",
+    "typings": "1.3.2"
   },
   "jspm": {
     "directories": {
