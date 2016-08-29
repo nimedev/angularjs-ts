@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.0] - 2012-08-29
+
+### Modified
+- Improve file structure.
+
+
 ## [0.5.2] - 2012-08-25
 
 ### Fixed

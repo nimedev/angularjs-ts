@@ -1,7 +1,6 @@
 /**
  * @module home.component
  */
-/// <reference path="home.d.ts" />
 
 // Dependencies
 import template from 'src/app/home/home.component.html!text'
@@ -40,7 +39,7 @@ export class HomeController {
 /**
  * Component object
  */
-export const homeComponent = {
+export const homeComponent: ng.IComponentOptions = {
   controller: HomeController,
   template
 }

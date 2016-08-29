@@ -7,7 +7,7 @@
 
 
 // Load configurations
-const config = require('./gulpconfig')
+const config = require('./gulp.config')
 
 // Use this module to inspect execution times
 if (config.timeRequire) {

@@ -35,7 +35,7 @@ export class AppController {
 /**
  * Component object
  */
-export const appComponent: any = {
+export const appComponent: ng.IComponentOptions = {
   controller: AppController,
   template: '<main ui-view></main>'
 }

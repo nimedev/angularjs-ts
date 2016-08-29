@@ -2,7 +2,6 @@
  * Module for app component.
  * @module app.module
  */
-/// <reference path="app.d.ts" />
 
 // Dependencies
 import * as angular from 'angular'

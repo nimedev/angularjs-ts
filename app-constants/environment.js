@@ -5,7 +5,7 @@
 'use strict'
 
 // Get jspm dependencies from package.json
-const appSetting = require('../../package')
+const appSetting = require('../package')
 
 /**
  * Class representing configurations for all environments

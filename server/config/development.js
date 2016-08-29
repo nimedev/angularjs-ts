@@ -24,9 +24,9 @@ module.exports = class extends Environment {
     this.port = envPort ? Number.parseInt(envPort) + 1 : 3001
 
     // Application path
-    this.appPath = path.normalize(`${__baseDir}/../client/src`)
+    this.appPath = path.normalize(`${__baseDir}/../src`)
 
     // Static paths
-    this.staticPaths = ['../client/dist', '../client/src', '../client']
+    this.staticPaths = ['../dist', '../src', '../']
   }
 }

@@ -28,6 +28,9 @@ npm install
 
 #### 4) Install `jspm` dependencies.
 ```sh
+# install jspm globally
+npm install jspm -g
+
 # cd to your project folder
 jspm install
 # answer yes to all questions
@@ -48,7 +51,7 @@ You can use `typings` for intellisense (I use this in VScode).
 # cd to your project folder
 npm run typings
 ```
-This create a `client\typings` folder which you can reference in your TypeScript files.
+This create a `typings` folder which you can reference in your TypeScript files.
 
 
 ## Workflow
@@ -93,8 +96,8 @@ This create a server for the application in a diferent port without hot reload o
 npm run watch
 ```
 
-This task process css files using `PostCSS`. All files in `src/styles` folder are compiled in a single file and copy in `client/dist`
-folder. The `*.css` files in `src/app` folder (also called component styles) are compiled individually in `client/dist/app` folder preserving the file for each component folder with `*.build.css` suffix.
+This task process css files using `PostCSS`. All files in `src/styles` folder are compiled in a single file and copy in `dist`
+folder. The `*.css` files in `src/app` folder (also called component styles) are compiled individually in `dist/app` folder preserving the file for each component folder with `*.build.css` suffix.
 
 :warning: **Important**: Use this script if you only like inspect css files and don't run `dev` script.
 
@@ -103,7 +106,7 @@ folder. The `*.css` files in `src/app` folder (also called component styles) are
 # cd to your project folder
 npm run build-test
 ```
-Put all in `client/dist` folder ready to be served.
+Put all in `dist` folder ready to be served.
 
 ```sh
 # cd to your project folder
@@ -116,7 +119,7 @@ Run a simple server for test deployment.
 # cd to your project folder
 npm run build
 ```
-Put all in `client/dist` folder ready for production.
+Put all in `dist` folder ready for production.
 
 This project include a small server ready for production
 
