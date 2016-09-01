@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.1] - 2012-09-01
+
+### Fixed
+- Fix bug with tmp folder in tsconfig.json.
+
+
 ## [1.0.0] - 2012-08-29
 
 ### Modified

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "../../tmp/",
+    "outDir": "../tmp/",
     "rootDir": ".",
     "target": "es5"
   }
