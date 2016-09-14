@@ -1,5 +1,21 @@
 # Change Log
 
+## [1.1.0] - 2012-09-14
+
+### Added
+- Implement dynamic-head service.
+- Add npm-shrinkwrap file.
+- Add autoscroll when use ui-view directive.
+- Add pre-commit hook.
+- Add .nvmrc file
+
+### Modified
+- Update dependencies workflow in README.md.
+
+### Updated
+- Upgrade browser-sync, eslint and niduscss utils modules.
+
+
 ## [1.0.1] - 2012-09-01
 
 ### Fixed

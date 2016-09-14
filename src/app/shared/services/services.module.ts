@@ -9,6 +9,7 @@ import * as angular from 'angular'
 // Feature modules
 
 // Shared services
+import { DynamicHeadService } from './dynamic-head.service'
 import { StylesService } from './styles.service'
 
 /**
@@ -19,4 +20,5 @@ export const servicesModule = 'services'
 // Define module
 angular
   .module(servicesModule, [])
+  .service(DynamicHeadService.serviceName, DynamicHeadService)
   .service(StylesService.serviceName, StylesService)

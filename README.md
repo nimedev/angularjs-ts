@@ -132,6 +132,23 @@ export NODE_ENV='production'
 npm start
 ```
 
+### Update dependencies
+Follow this rules to update dependencies:
+
+- Uninstall old dependency and install again
+
+```sh
+# cd to your project folder
+npm uninstall eslint && npm install eslint -D
+```
+
+- Update shrinkwrap file
+
+```sh
+# cd to your project folder
+npm shrinkwrap --dev
+```
+
 ### Others scripts
 
 To clean environment variables and distribution folders type:
@@ -167,13 +184,6 @@ To run all linters and TypeScript compiler in console type:
 ```sh
 # cd to your project folder
 npm run lint
-```
-
-To update npm dependencies after change a version in packages
-
-```sh
-# cd to your project folder
-npm run update
 ```
 
 

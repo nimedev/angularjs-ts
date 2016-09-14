@@ -20,6 +20,12 @@ export function homeConfig($stateProvider) {
   $stateProvider
     .state(stateName, {
       url: '/',
-      template: '<ats-home></ats-home>'
+      template: '<ats-home></ats-home>',
+      data: {
+        dynamicHead: {
+          title: 'AngularJS seed - Home',
+          description: 'AngularJS seed, angular typescritp'
+        }
+      }
     })
 }
